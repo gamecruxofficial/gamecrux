@@ -1,0 +1,35 @@
+<svg width="52" height="52" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="52" height="52" fill="url(#paint0_radial_5_311)" fill-opacity="0.25"/>
+<rect x="1" y="1" width="50" height="50" stroke="#E85261" stroke-opacity="0.2" stroke-width="2"/>
+<rect width="2" height="2" fill="#E85261"/>
+<rect x="0.5" y="0.5" width="1" height="1" stroke="#E85261" stroke-opacity="0.2"/>
+<rect y="2" width="2" height="2" fill="#E85261"/>
+<rect x="0.5" y="2.5" width="1" height="1" stroke="#E85261" stroke-opacity="0.2"/>
+<rect x="2" width="2" height="2" fill="#E85261"/>
+<rect x="2.5" y="0.5" width="1" height="1" stroke="#E85261" stroke-opacity="0.2"/>
+<rect width="2" height="2" transform="matrix(-1 0 0 1 52 0)" fill="#E85261"/>
+<rect x="-0.5" y="0.5" width="1" height="1" transform="matrix(-1 0 0 1 51 0)" stroke="#E85261" stroke-opacity="0.2"/>
+<rect width="2" height="2" transform="matrix(-1 0 0 1 52 2)" fill="#E85261"/>
+<rect x="-0.5" y="0.5" width="1" height="1" transform="matrix(-1 0 0 1 51 2)" stroke="#E85261" stroke-opacity="0.2"/>
+<rect width="2" height="2" transform="matrix(-1 0 0 1 50 0)" fill="#E85261"/>
+<rect x="-0.5" y="0.5" width="1" height="1" transform="matrix(-1 0 0 1 49 0)" stroke="#E85261" stroke-opacity="0.2"/>
+<rect width="2" height="2" transform="matrix(1 0 0 -1 0 52)" fill="#E85261"/>
+<rect x="0.5" y="-0.5" width="1" height="1" transform="matrix(1 0 0 -1 0 51)" stroke="#E85261" stroke-opacity="0.2"/>
+<rect width="2" height="2" transform="matrix(1 0 0 -1 0 50)" fill="#E85261"/>
+<rect x="0.5" y="-0.5" width="1" height="1" transform="matrix(1 0 0 -1 0 49)" stroke="#E85261" stroke-opacity="0.2"/>
+<rect width="2" height="2" transform="matrix(1 0 0 -1 2 52)" fill="#E85261"/>
+<rect x="0.5" y="-0.5" width="1" height="1" transform="matrix(1 0 0 -1 2 51)" stroke="#E85261" stroke-opacity="0.2"/>
+<rect x="52" y="52" width="2" height="2" transform="rotate(180 52 52)" fill="#E85261"/>
+<rect x="51.5" y="51.5" width="1" height="1" transform="rotate(180 51.5 51.5)" stroke="#E85261" stroke-opacity="0.2"/>
+<rect x="52" y="50" width="2" height="2" transform="rotate(180 52 50)" fill="#E85261"/>
+<rect x="51.5" y="49.5" width="1" height="1" transform="rotate(180 51.5 49.5)" stroke="#E85261" stroke-opacity="0.2"/>
+<rect x="50" y="52" width="2" height="2" transform="rotate(180 50 52)" fill="#E85261"/>
+<rect x="49.5" y="51.5" width="1" height="1" transform="rotate(180 49.5 51.5)" stroke="#E85261" stroke-opacity="0.2"/>
+<path d="M17.3 13.3374C16.8475 13.3374 16.3946 13.5106 16.0478 13.8573L13.8573 16.0479C13.1638 16.7413 13.1638 17.8582 13.8573 18.5516L21.2108 25.9052L13.8573 33.2587C13.1638 33.9521 13.1638 35.069 13.8573 35.7624L16.0478 37.953C16.7413 38.6464 17.8581 38.6464 18.5516 37.953L25.9051 30.5994L33.2587 37.953C33.9521 38.6464 35.069 38.6464 35.7624 37.953L37.953 35.7624C38.6464 35.069 38.6464 33.9521 37.953 33.2587L30.5994 25.9052L37.953 18.5516C38.6464 17.8582 38.6464 16.7413 37.953 16.0479L35.7624 13.8573C35.069 13.1639 33.9521 13.1639 33.2587 13.8573L25.9051 21.2109L18.5516 13.8573C18.2048 13.5106 17.7525 13.3374 17.3 13.3374Z" fill="#E85261"/>
+<defs>
+<radialGradient id="paint0_radial_5_311" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(26 26) rotate(90) scale(26)">
+<stop stop-color="#E85261"/>
+<stop offset="1" stop-color="#822E36"/>
+</radialGradient>
+</defs>
+</svg>

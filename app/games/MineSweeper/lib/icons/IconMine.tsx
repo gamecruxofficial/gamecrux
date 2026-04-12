@@ -1,0 +1,94 @@
+import React from 'react';
+
+const IconMine: React.FC<{ className?: string }> = ({ className = '' }) => (
+    <svg
+        className={`w-[60%] h-[60%] ${className}`}
+        viewBox="0 0 15 15"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+    >
+        <circle
+            cx="7.5"
+            cy="7.5"
+            r="4"
+            stroke="currentColor"
+            strokeWidth="2"
+            fill="currentColor"
+            className="stroke-primary fill-primary"
+        />
+        <line
+            x1="7.5"
+            y1="0"
+            x2="7.5"
+            y2="4"
+            stroke="currentColor"
+            strokeWidth="1"
+            className="stroke-primary"
+        />
+        <line
+            x1="7.5"
+            y1="11"
+            x2="7.5"
+            y2="15"
+            stroke="currentColor"
+            strokeWidth="1"
+            className="stroke-primary"
+        />
+        <line
+            x1="0"
+            y1="7.5"
+            x2="4"
+            y2="7.5"
+            stroke="currentColor"
+            strokeWidth="1"
+            className="stroke-primary"
+        />
+        <line
+            x1="11"
+            y1="7.5"
+            x2="15"
+            y2="7.5"
+            stroke="currentColor"
+            strokeWidth="1"
+            className="stroke-primary"
+        />
+        <line
+            x1="3"
+            y1="3"
+            x2="5.5"
+            y2="5.5"
+            stroke="currentColor"
+            strokeWidth="1"
+            className="stroke-primary"
+        />
+        <line
+            x1="9.5"
+            y1="9.5"
+            x2="12"
+            y2="12"
+            stroke="currentColor"
+            strokeWidth="1"
+            className="stroke-primary"
+        />
+        <line
+            x1="3"
+            y1="12"
+            x2="5.5"
+            y2="9.5"
+            stroke="currentColor"
+            strokeWidth="1"
+            className="stroke-primary"
+        />
+        <line
+            x1="9.5"
+            y1="5.5"
+            x2="12"
+            y2="3"
+            stroke="currentColor"
+            strokeWidth="1"
+            className="stroke-primary"
+        />
+    </svg>
+);
+
+export default IconMine;
