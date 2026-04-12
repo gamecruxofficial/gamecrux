@@ -33,7 +33,7 @@ const popin = Poppins({
 
 export const metadata: Metadata = {
   title: "GAMECRUX",
-  description: "Discover, Play, and Enjoy a Curated Selection of Exciting Minigames",
+  description: "Discover, Play, and Enjoy a Curated Selection of Exciting games",
 };
 
 export default function RootLayout({
