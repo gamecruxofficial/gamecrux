@@ -43,6 +43,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${popin.variable} ${zentry.variable} ${general.variable} ${myFont.variable}`} suppressHydrationWarning>
+      <head>
+        {/* --- Force AdSense into the HTML Head for the Crawler --- */}
+        <Script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3995206425319557"
+          crossOrigin="anonymous"
+          strategy="beforeInteractive" 
+        />
+      </head>
       <body suppressHydrationWarning={true}>
         <SessionProvider>
           <LenisProvider>
@@ -67,15 +76,7 @@ export default function RootLayout({
           }}
         />
 
-        {/* --- Google AdSense Script (Moved inside body) --- */}
-        <Script
-          async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3995206425319557"
-          crossOrigin="anonymous"
-          strategy="afterInteractive"
-        />
-
-        {/* --- Google Analytics Scripts (Moved inside body) --- */}
+        {/* --- Google Analytics Scripts --- */}
         <Script 
           strategy="afterInteractive"
           src="https://www.googletagmanager.com/gtag/js?id=G-GZ5CFF3T5L"
