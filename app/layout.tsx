@@ -66,32 +66,32 @@ export default function RootLayout({
             },
           }}
         />
+
+        {/* --- Google AdSense Script (Moved inside body) --- */}
+        <Script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3995206425319557"
+          crossOrigin="anonymous"
+          strategy="afterInteractive"
+        />
+
+        {/* --- Google Analytics Scripts (Moved inside body) --- */}
+        <Script 
+          strategy="afterInteractive"
+          src="https://www.googletagmanager.com/gtag/js?id=G-GZ5CFF3T5L"
+        />
+        <Script 
+          id="google-analytics"
+          strategy="afterInteractive"
+        >
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-GZ5CFF3T5L');
+          `}
+        </Script>
       </body>
-
-      {/* --- Google AdSense Script --- */}
-      <Script
-        async
-        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3995206425319557"
-        crossOrigin="anonymous"
-        strategy="afterInteractive"
-      />
-
-      {/* --- Google Analytics Scripts --- */}
-      <Script 
-        strategy="afterInteractive"
-        src="https://www.googletagmanager.com/gtag/js?id=G-GZ5CFF3T5L"
-      />
-      <Script 
-        id="google-analytics"
-        strategy="afterInteractive"
-      >
-        {`
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', 'G-GZ5CFF3T5L');
-        `}
-      </Script>
     </html>
   );
 }
