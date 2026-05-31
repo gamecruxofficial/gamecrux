@@ -43,15 +43,17 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${popin.variable} ${zentry.variable} ${general.variable} ${myFont.variable}`} suppressHydrationWarning>
+      
+      {/* 1. FORCE THE HTML HEAD TAG */}
       <head>
-        {/* --- Force AdSense into the HTML Head for the Crawler --- */}
-        <Script
-          async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3995206425319557"
+        {/* 2. Place the AdSense script inside the head and load it synchronously/immediately */}
+        <script 
+          async 
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3995206425319557" 
           crossOrigin="anonymous"
-          strategy="beforeInteractive" 
         />
       </head>
+
       <body suppressHydrationWarning={true}>
         <SessionProvider>
           <LenisProvider>
@@ -76,7 +78,7 @@ export default function RootLayout({
           }}
         />
 
-        {/* --- Google Analytics Scripts --- */}
+        {/* --- Google Analytics Scripts (Keep these in the body) --- */}
         <Script 
           strategy="afterInteractive"
           src="https://www.googletagmanager.com/gtag/js?id=G-GZ5CFF3T5L"
