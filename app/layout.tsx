@@ -34,6 +34,11 @@ const popin = Poppins({
 export const metadata: Metadata = {
   title: "GAMECRUX",
   description: "Discover, Play, and Enjoy a Curated Selection of Exciting games",
+  alternates: {
+    types: {
+      "application/rss+xml": "/feed.xml",
+    },
+  },
 };
 
 export default function RootLayout({
@@ -43,17 +48,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${popin.variable} ${zentry.variable} ${general.variable} ${myFont.variable}`} suppressHydrationWarning>
-      
-      {/* 1. FORCE THE HTML HEAD TAG */}
       <head>
-        {/* 2. Place the AdSense script inside the head and load it synchronously/immediately */}
-        <script 
-          async 
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3995206425319557" 
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3995206425319557"
           crossOrigin="anonymous"
         />
       </head>
-
       <body suppressHydrationWarning={true}>
         <SessionProvider>
           <LenisProvider>
@@ -77,13 +78,11 @@ export default function RootLayout({
             },
           }}
         />
-
-        {/* --- Google Analytics Scripts (Keep these in the body) --- */}
-        <Script 
+        <Script
           strategy="afterInteractive"
           src="https://www.googletagmanager.com/gtag/js?id=G-GZ5CFF3T5L"
         />
-        <Script 
+        <Script
           id="google-analytics"
           strategy="afterInteractive"
         >
