@@ -121,14 +121,12 @@ export default function Navbar() {
             {/* Login Button or User Menu */}
             <div className="absolute right-0">
             {status === "loading" ? (
-              
               <Button
                 disabled
                 className="bg-[#FFD12E] text-black hover:bg-[#FFD12E]/90 rounded-md px-4 py-2 font-medium focus:outline-none focus:ring-2 focus:ring-[#FFD12E] focus:ring-offset-2 focus:ring-offset-black transition-colors"
               >
                 Loading
                 <Loader2 className="ml-2 h-4 w-4 animate-spin" />
-
               </Button>
             ) : session ? (
               <div className="flex items-center gap-4">

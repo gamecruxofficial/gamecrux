@@ -3,7 +3,6 @@ import Footer from '@/components/footer';
 import GamePlay from '@/components/game-play';
 import Glance from '@/components/glance';
 import Hero from '@/components/hero';
-import Navbar from '@/components/navbar';
 import { CurrencyProvider } from '@/contexts/CurrencyProvider';
 import PricingSection from './pages/pricing/page';
 
@@ -22,7 +21,6 @@ export default function Home() {
 
       {/* Content */}
       <div className="relative z-10">
-        <Navbar />
         <Hero />
 
         <div id="carousel" className="scroll-mt-[72px]">

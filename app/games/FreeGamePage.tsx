@@ -64,10 +64,9 @@ const GameSection = ({
       toast.error("Please sign in to continue");
       router.push('/sign-in')
       return
-    }else {
+    } else {
       router.push('/pages/pricing')
     }
-
   }
 
   return (

@@ -3,6 +3,14 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
 
   output: "standalone",
+  async redirects() {
+    return [
+      { source: "/privacy", destination: "/pages/privacy", permanent: true },
+      { source: "/terms", destination: "/pages/terms", permanent: true },
+      { source: "/test", destination: "/games", permanent: false },
+      { source: "/test-recurring", destination: "/pages/pricing", permanent: false },
+    ];
+  },
   webpack: (config) => {
     config.resolve.fallback = {
       ...config.resolve.fallback,

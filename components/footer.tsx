@@ -35,9 +35,9 @@ export default function GameCruxLandingPage() {
                 <Link href="/pages/terms" className="text-gray-300 hover:text-white transition-colors">
                   Terms & Conditions
                 </Link>
-                {/* <Link href="/pages/privacy" className="text-gray-300 hover:text-white transition-colors">
+                <Link href="/pages/privacy" className="text-gray-300 hover:text-white transition-colors">
                   Privacy Policy
-                </Link> */}
+                </Link>
                 <Link href="/pages/refund" className="text-gray-300 hover:text-white transition-colors">
                   Refund Policy
                 </Link>

@@ -24,7 +24,6 @@ export default function PricingSection() {
   const [processingStates, setProcessingStates] = useState<Record<string, boolean>>({});
   const [subscription, setSubscription] = useState<{ plan: string } | null>(null);
   const [Tebex, setTebex] = useState<any>(null);
-  const [loading, setLoading] = useState(true);
   const { handleSocialSignIn } = useSocialSignIn();
 
   useEffect(() => {
@@ -47,13 +46,9 @@ export default function PricingSection() {
           }
         } catch (error) {
           console.error("Error fetching subscription:", error);
-        } finally {
-          setLoading(false);
         }
       };
       fetchUserSubscription();
-    } else {
-      setLoading(false);
     }
   }, [session]);
 
@@ -191,15 +186,15 @@ export default function PricingSection() {
                   <Button
                     className="w-full bg-[#FFD12E] hover:bg-[#E5BC29] text-black font-semibold"
                     onClick={() => handleGetStarted(plan)}
-                    disabled={isProcessing || isPlanActive || loading}
+                    disabled={isProcessing || isPlanActive}
                   >
-                    {loading
-                      ? "Loading..."
-                      : isPlanActive
+                    {isPlanActive
                       ? "Current Plan"
                       : isProcessing
                       ? "Processing..."
-                      : "Subscribe"}
+                      : session
+                      ? "Subscribe"
+                      : "Get Started"}
                   </Button>
                 </CardFooter>
               </Card>
