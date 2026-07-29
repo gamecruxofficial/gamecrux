@@ -70,7 +70,7 @@ const GameSection = ({
                 </div>
                 <div className="mt-3">
                   <h3 className="text-lg font-bold text-white mb-1">{game.title}</h3>
-                  {/* <PlayerCount game={game} /> */}
+                  <PlayerCount game={game} />
                 </div>
               </div>
             </Card>

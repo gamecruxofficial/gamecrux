@@ -153,31 +153,75 @@ export async function POST(request: NextRequest) {
 
 /**
  * Handles a completed payment. Creates a new subscription or updates an existing one.
- * This is the most critical handler for new purchases.
+ * Uses the webhook subject first (already contains userid + products), then falls back
+ * to the Checkout Payments API if needed.
  */
 async function handlePaymentCompleted(subject: any) {
   try {
     const transactionId = subject?.transaction_id;
     if (!transactionId) {
-      console.warn("handlePaymentCompleted: Event is missing transaction_id.");
-      return;
+      throw new Error("handlePaymentCompleted: Event is missing transaction_id.");
     }
 
     console.log(`handlePaymentCompleted: Processing transaction ${transactionId}`);
-    
-    // Fetch full, verified payment details from Tebex API for security and accuracy
-    const paymentDetails = await fetchPaymentDetailsServerSide(transactionId);
 
-    // Directly call the server action to handle database logic
+    let paymentDetails = {
+      transaction_id: transactionId,
+      products: Array.isArray(subject?.products) ? subject.products : [],
+      custom: subject?.custom ?? {},
+      recurring_payment_reference: subject?.recurring_payment_reference ?? null,
+      price_paid: subject?.price_paid,
+    };
+
+    // Prefer webhook payload; only call Tebex API when userid/products are missing
+    const hasUserId = Boolean(paymentDetails.custom?.userid);
+    const hasProducts = paymentDetails.products.length > 0;
+
+    if (!hasUserId || !hasProducts) {
+      console.log(
+        `Webhook subject incomplete (userId=${hasUserId}, products=${hasProducts}). Fetching payment from Tebex API...`
+      );
+      try {
+        const apiDetails = await fetchPaymentDetailsServerSide(transactionId);
+        paymentDetails = {
+          transaction_id: apiDetails?.transaction_id ?? transactionId,
+          products: Array.isArray(apiDetails?.products)
+            ? apiDetails.products
+            : paymentDetails.products,
+          custom: {
+            ...paymentDetails.custom,
+            ...(apiDetails?.custom ?? {}),
+          },
+          recurring_payment_reference:
+            apiDetails?.recurring_payment_reference ??
+            paymentDetails.recurring_payment_reference,
+          price_paid: apiDetails?.price_paid ?? paymentDetails.price_paid,
+        };
+      } catch (apiError) {
+        console.error("Failed fetching payment details from Tebex API:", apiError);
+        // Continue with webhook subject if API fails — still try to insert
+      }
+    }
+
+    if (!paymentDetails.custom?.userid) {
+      throw new Error(
+        `handlePaymentCompleted: No custom.userid on transaction ${transactionId}`
+      );
+    }
+
     const result = await processPayment(paymentDetails);
 
-    if (result.success) {
-        console.log(`Successfully processed payment for user via processPayment action.`);
-    } else {
-        console.error(`processPayment action failed: ${result.message}`);
+    if (!result.success) {
+      throw new Error(`processPayment failed: ${result.message}`);
     }
+
+    console.log(
+      `Successfully processed payment for user ${paymentDetails.custom.userid}`
+    );
   } catch (error) {
-    console.error('Error in handlePaymentCompleted:', error);
+    console.error("Error in handlePaymentCompleted:", error);
+    // Re-throw so the webhook returns non-200 and Tebex retries
+    throw error;
   }
 }
 

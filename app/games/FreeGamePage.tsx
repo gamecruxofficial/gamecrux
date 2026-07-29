@@ -95,9 +95,9 @@ const GameSection = ({
                 </div>
                 <div className="mt-3">
                   <h3 className="text-lg font-bold text-white mb-1">{game.title}</h3>
-                  {/* <Suspense fallback={<p className="text-xs text-gray-300">Loading...</p>}>
+                  <Suspense fallback={<p className="text-xs text-gray-300">Loading...</p>}>
                     <PlayerCount game={game} />
-                  </Suspense> */}
+                  </Suspense>
                 </div>
               </div>
             </Card>

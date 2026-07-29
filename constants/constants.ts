@@ -306,6 +306,23 @@ export interface PricingTier {
 
 export const plans: PricingTier[] = [
   {
+    name: "TESTING PLAN",
+    price: {
+      INR: 1,
+      EUR: 0.01
+    },
+    duration: "test package",
+    durationTime: "1",
+    tebexId: "7587199",
+    features: [
+      "Testing package only",
+      "Access to all mini-games",
+      "Used for checkout verification",
+    ],
+    description: "Temporary package for payment testing",
+    imageUrl: "/1month.png"
+  },
+  {
     name: "STARTER PLAN",
     price: {
       INR: 30,
