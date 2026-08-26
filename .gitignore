@@ -40,3 +40,15 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Documentation & Database backups
+PROJECT_OVERVIEW.md
+data_only.sql
+db_cluster-17-09-2025@20-12-52.backup
+db_cluster-17-09-2025@20-12-52.backup.gz
+dump_cleaned.sql
+dump_from_backup.sql
+import_data_clean.sql
+migrate-to-neon.sh
+MIGRATION_GUIDE.md
+NEON_SETUP_SUMMARY.md
