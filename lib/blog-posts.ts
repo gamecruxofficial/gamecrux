@@ -6,7 +6,7 @@ export type BlogPost = {
   content: string;
 };
 
-export const SITE_URL = "https://www.gamecrux.io";
+export const SITE_URL = "https://www.thegamecrux.com";
 
 export const blogPosts: BlogPost[] = [
   {
