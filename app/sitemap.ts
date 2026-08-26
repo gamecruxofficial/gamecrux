@@ -10,6 +10,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${SITE_URL}/pages/pricing`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
     { url: `${SITE_URL}/pages/about`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.7 },
     { url: `${SITE_URL}/pages/contact`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.6 },
+    { url: `${SITE_URL}/pages/suggest`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.5 },
     { url: `${SITE_URL}/pages/terms`, lastModified: new Date(), changeFrequency: "yearly", priority: 0.5 },
     { url: `${SITE_URL}/pages/privacy`, lastModified: new Date(), changeFrequency: "yearly", priority: 0.5 },
     { url: `${SITE_URL}/pages/refund`, lastModified: new Date(), changeFrequency: "yearly", priority: 0.5 },
@@ -22,9 +23,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }));
 
-  const gamePages: MetadataRoute.Sitemap = games.slice(0, 10).map((game) => ({
+  const gamePages: MetadataRoute.Sitemap = games.map((game) => ({
     url: `${SITE_URL}${game.href}`,
-    lastModified: new Date(),
     changeFrequency: "monthly" as const,
     priority: 0.6,
   }));

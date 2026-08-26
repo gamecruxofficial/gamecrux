@@ -3,11 +3,28 @@ import { SITE_URL } from "@/lib/blog-posts";
 
 export default function robots(): MetadataRoute.Robots {
   return {
-    rules: {
-      userAgent: "*",
-      allow: "/",
-      disallow: ["/test", "/test-recurring", "/api/"],
-    },
+    rules: [
+      {
+        userAgent: "*",
+        allow: "/",
+        disallow: ["/api/"],
+      },
+      {
+        userAgent: [
+          "GPTBot",
+          "ClaudeBot",
+          "Google-Extended",
+          "CCBot",
+          "Bytespider",
+          "Meta-ExternalAgent",
+          "Amazonbot",
+          "Applebot-Extended",
+          "cohere-ai",
+          "Omgilibot",
+        ],
+        disallow: "/",
+      },
+    ],
     sitemap: `${SITE_URL}/sitemap.xml`,
   };
 }
