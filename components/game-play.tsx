@@ -51,7 +51,7 @@ export default function GamePlay() {
     <section className="text-white px-4 py-16 mt-12">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <h1 className="text-4xl font-bold mb-4">Explore the best games in action right now!</h1>
+          <h2 className="text-4xl font-bold mb-4">Explore the best games in action right now!</h2>
           <p className="text-gray-400">Check out our games video below to get a sneak peek.</p>
         </div>
 

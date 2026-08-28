@@ -610,7 +610,7 @@ export default function StickGamePage() {
       <div className="flex flex-col items-center mt-24 text-white p-4">
         <div className="bg-gray-800 rounded-lg shadow-lg p-6 w-full max-w-lg mb-6 flex flex-col items-center">
           <CircleUserRound className="w-16 h-16 mb-4" />
-          <span className="text-3xl font-bold mb-2">Stick Game</span>
+          <h1 className="text-3xl font-bold mb-2">Stick Game</h1>
           <span className="text-lg mb-8 text-gray-400">Proof of Training Required</span>
           <div className="w-full">
             <div className="space-y-4">

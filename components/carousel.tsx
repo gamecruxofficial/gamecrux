@@ -46,9 +46,9 @@ const ProductCarousel = () => {
     <MaxWidthWrapper maxWidth="2xl">
       <section className="py-4 sm:py-8 md:py-12 text-gray-100">
         <div className="container mx-auto px-2 sm:px-4">
-          <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl leading-none tracking-wide font-bold text-white font-zentry mb-4">
+          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl leading-none tracking-wide font-bold text-white font-zentry mb-4">
             Trending games
-          </h1>
+          </h2>
 
           <div
             ref={scrollRef}

@@ -92,7 +92,7 @@ const Glance: React.FC = () => {
                         >
                             <div className='p-4 sm:p-5 flex-shrink-0'>
                                 <h3>WorldWide Available</h3>
-                                <h1 className='plain-heading special-font font-zentry text-3xl sm:text-5xl md:text-7xl lg:text-9xl hover-text'>24<b>/</b>7</h1>
+                                <p className='plain-heading special-font font-zentry text-3xl sm:text-5xl md:text-7xl lg:text-9xl hover-text'>24<b>/</b>7</p>
                             </div>
                             <div className='w-full'>
                                 <video src='/card-1.webm' loop muted autoPlay playsInline className='w-full h-full object-cover' />
@@ -107,7 +107,7 @@ const Glance: React.FC = () => {
                             onMouseEnter={() => setIsHovering(true)}
                             onMouseLeave={() => setIsHovering(false)}
                         >
-                            <h1 className='plain-heading font-zentry text-black text-6xl sm:text-8xl md:text-9xl lg:text-[16rem] leading-none hover-text'>2<b>5</b>+</h1>
+                            <p className='plain-heading font-zentry text-black text-6xl sm:text-8xl md:text-9xl lg:text-[16rem] leading-none hover-text'>2<b>5</b>+</p>
                             <div className='p-2 sm:p-5'>
                                 <h3 className='text-black text-end font-semibold opacity-70'>games</h3>
                             </div>
@@ -123,7 +123,7 @@ const Glance: React.FC = () => {
                         >
                             <div className='p-4 sm:p-5'>
                                 <h3 className='text-black text-start font-semibold opacity-70'>Active Users</h3>
-                                <h1 className='plain-heading special-font font-zentry text-black text-5xl sm:text-6xl md:text-7xl lg:text-[8rem] leading-none text-start hover-text'>1000<b>+</b></h1>
+                                <p className='plain-heading special-font font-zentry text-black text-5xl sm:text-6xl md:text-7xl lg:text-[8rem] leading-none text-start hover-text'>1000<b>+</b></p>
                             </div>
                             {/* Adjusted negative margin for responsiveness */}
                             <video src='/card-5.webm' loop muted autoPlay playsInline className='w-full h-auto mx-auto max-w-xs sm:max-w-sm -mt-16 sm:-mt-24 md:-mt-36' />
@@ -143,7 +143,7 @@ const Glance: React.FC = () => {
                         >
                             <div className='p-4 sm:p-5'>
                                 <h3 className='text-black text-start font-semibold opacity-70'>Members</h3>
-                                <h1 className='plain-heading special-font font-zentry text-black text-6xl sm:text-8xl md:text-9xl lg:text-[14rem] leading-none text-center hover-text'>100<b>0</b>+</h1>
+                                <p className='plain-heading special-font font-zentry text-black text-6xl sm:text-8xl md:text-9xl lg:text-[14rem] leading-none text-center hover-text'>100<b>0</b>+</p>
                             </div>
                             {/* Adjusted negative margin for better stacking on mobile */}
                             <div className='relative w-full -mt-10 sm:-mt-20 md:-mt-36 lg:-mt-72 z-10'>
@@ -165,7 +165,7 @@ const Glance: React.FC = () => {
                             onMouseEnter={() => setIsHovering(true)}
                             onMouseLeave={() => setIsHovering(false)}
                         >
-                            <h1 className='plain-heading font-zentry text-white text-4xl sm:text-5xl md:text-6xl max-w-sm leading-none text-start hover-text'>W<b>o</b>rld-Class G<b>a</b>mes</h1>
+                            <p className='plain-heading font-zentry text-white text-4xl sm:text-5xl md:text-6xl max-w-sm leading-none text-start hover-text'>W<b>o</b>rld-Class G<b>a</b>mes</p>
                         </div>
 
                         {/* Card 6: Upcoming Games */}
@@ -178,7 +178,7 @@ const Glance: React.FC = () => {
                         >
                             <h3 className='text-black text-start font-semibold opacity-70'>Upcoming games <br />2025</h3>
                             {/* Responsive font size and line height */}
-                            <h1 className='plain-heading special-font font-zentry text-black text-6xl sm:text-8xl md:text-9xl lg:text-[18rem] leading-tight sm:leading-tight md:leading-tight lg:leading-tight hover-text'>10<b>0</b>+</h1>
+                            <p className='plain-heading special-font font-zentry text-black text-6xl sm:text-8xl md:text-9xl lg:text-[18rem] leading-tight sm:leading-tight md:leading-tight lg:leading-tight hover-text'>10<b>0</b>+</p>
                         </div>
                     </div>
                 </div>
