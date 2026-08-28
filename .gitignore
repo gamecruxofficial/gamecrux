@@ -52,3 +52,4 @@ import_data_clean.sql
 migrate-to-neon.sh
 MIGRATION_GUIDE.md
 NEON_SETUP_SUMMARY.md
+postman-payload.json
