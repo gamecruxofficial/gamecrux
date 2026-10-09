@@ -59,7 +59,7 @@ export default function GameCruxLandingPage() {
                 <Link
                   href="#"
                   className="bg-white text-black p-2 rounded-full hover:bg-gray-200 transition-colors"
-                  onClick={() => window.open("https://discord.gg/PcjapvBuzy", "_blank")}
+                  onClick={() => window.open("https://discord.gg/Pd6YW7HHnz", "_blank")}
                 >
                   <AiOutlineDiscord size={20} />
                   <span className="sr-only">Discord</span>

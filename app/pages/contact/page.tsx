@@ -15,7 +15,7 @@ const Contact = () => {
                 <p className="flex items-center">
                   Or open a ticket on Discord:&nbsp;
                   <a
-                    href="https://discord.gg/PcjapvBuzy"
+                    href="https://discord.gg/Pd6YW7HHnz"
                     className="text-white inline-flex items-center"
                     target="_blank"
                     rel="noopener noreferrer"

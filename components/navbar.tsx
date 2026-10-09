@@ -132,7 +132,7 @@ export default function Navbar() {
               <div className="flex items-center gap-4">
                 <Button
                   className="bg-[#262626] p-2 rounded-full text-white items-center border-black transition-all hover:opacity-70"
-                  onClick={() => window.open("https://discord.gg/PcjapvBuzy", "_blank")}
+                  onClick={() => window.open("https://discord.gg/Pd6YW7HHnz", "_blank")}
                 >
                   <HeadphonesIcon size={20} />
                 </Button>

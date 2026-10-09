@@ -269,7 +269,7 @@ const SideAd = ({
   position,
   isTop,
   imageUrl = "/ads-1.png",
-  linkUrl = "https://discord.gg/gw2xfZSx6J"
+  linkUrl = "https://discord.gg/Pd6YW7HHnz"
 }: {
   position: 'left' | 'right',
   isTop: boolean,
@@ -307,10 +307,10 @@ export default function FreeGamePage() {
   return (
     <div className="relative">
       {/* Side Advertisements */}
-      {/* <SideAd position="left" isTop={true} imageUrl="/ads-1.png" linkUrl="https://discord.gg/gw2xfZSx6J" />
-      <SideAd position="right" isTop={true} imageUrl="/ads-2.png" linkUrl="https://discord.gg/PcjapvBuzy" />
-      <SideAd position="left" isTop={false} imageUrl="/ads-2.png" linkUrl="https://discord.gg/PcjapvBuzy" />
-      <SideAd position="right" isTop={false} imageUrl="/ads-2.png" linkUrl="https://discord.gg/PcjapvBuzy" /> */}
+      {/* <SideAd position="left" isTop={true} imageUrl="/ads-1.png" linkUrl="https://discord.gg/Pd6YW7HHnz" />
+      <SideAd position="right" isTop={true} imageUrl="/ads-2.png" linkUrl="https://discord.gg/Pd6YW7HHnz" />
+      <SideAd position="left" isTop={false} imageUrl="/ads-2.png" linkUrl="https://discord.gg/Pd6YW7HHnz" />
+      <SideAd position="right" isTop={false} imageUrl="/ads-2.png" linkUrl="https://discord.gg/Pd6YW7HHnz" /> */}
 
       <MaxWidthWrapper maxWidth="1370px" className="md:px-32 lg:px-48 2xl:px-32 4xl:px-4">
         <div className="min-h-screen text-white p-4 space-y-8 mb-32">
